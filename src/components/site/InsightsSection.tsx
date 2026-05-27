@@ -66,7 +66,7 @@ function FeaturedInsightCard() {
         </Heading>
         <InsightMeta />
         <div className="mt-auto pt-8">
-          <ReadMoreButton />
+          <ReadMoreButton /> 
         </div>
       </div>
     </article>
