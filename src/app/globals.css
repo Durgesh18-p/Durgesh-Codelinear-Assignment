@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .section-dark {
+    @apply bg-[#000D12] text-[#E9F4F9];
+  }
+
+  .eyebrow {
+    @apply font-mono text-xs font-normal uppercase leading-[1.3] tracking-normal text-[#2490BB]/80;
+  }
+
+  .body-copy {
+    @apply text-base font-normal leading-[1.3];
+  }
+
+  .body-copy-muted {
+    @apply text-base font-normal leading-[1.3] text-[#E9F4F9]/70;
+  }
+
+  .body-copy-muted-light {
+    @apply text-base font-normal leading-[1.3] text-[#000D12]/70;
+  }
+
+  .arrow-hover {
+    @apply transition duration-200 group-hover:translate-x-1;
+  }
+
+  .underline-link-label {
+    @apply relative pb-2 after:absolute after:bottom-0 after:left-0 after:h-px after:w-[32.58px] after:bg-[#00B4FD];
+  }
+
+  .blue-action-link {
+    @apply inline-flex items-center gap-2 font-mono text-sm font-normal uppercase leading-[1.3] tracking-normal text-[#00B4FD];
+  }
+
+  .wave-hand {
+    animation: wave-hand 1.8s ease-in-out infinite;
+    transform-origin: 70% 70%;
+  }
+
+  .mobile-marquee {
+    animation: mobile-marquee 18s linear infinite;
+  }
+
+  .tilt-from-top-left {
+    transform-origin: left top;
+    transition: transform 350ms ease, filter 350ms ease;
+    will-change: transform;
+  }
+
+  .tilt-from-top-left:hover {
+    transform: perspective(900px) rotateZ(-3deg) rotateY(-8deg) translateY(-4px);
+    filter: drop-shadow(0 18px 26px rgba(0, 0, 0, 0.2));
+  }
+}
+
+@keyframes mobile-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes wave-hand {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  15% {
+    transform: rotate(14deg);
+  }
+
+  30% {
+    transform: rotate(-8deg);
+  }
+
+  45% {
+    transform: rotate(12deg);
+  }
+
+  60% {
+    transform: rotate(-5deg);
+  }
+
+  75% {
+    transform: rotate(8deg);
+  }
+}
+
+:root {
+  color-scheme: dark;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  text-rendering: optimizeLegibility;
+  line-height: 1.5;
+  background-color: #000d12;
+}
+
+html {
+  scroll-behavior: smooth;
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #000d12;
+  color: #ffffff;
+}
+
+* {
+  border-color: hsl(222 15% 18%);
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(56, 189, 248, 0.25);
+  color: #e2e8f0;
+}
+
+body,
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
