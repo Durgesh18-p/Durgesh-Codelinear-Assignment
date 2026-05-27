@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/Button';
 import { Heading } from '@/components/ui/Heading';
+import { LearnMoreLink } from '@/components/ui/LearnMoreLink';
 import { Container } from '@/components/shared/Container';
 import { StickyColumn } from '@/components/shared/StickyColumn';
 
@@ -57,26 +58,6 @@ function TickerContent() {
       <TickerMark />
       <span>Say</span>
     </div>
-  );
-}
-
-function LearnMoreLink() {
-  return (
-    <a
-      href="#"
-      className="group inline-flex items-center gap-[5px] font-mono text-sm font-normal uppercase leading-[1.3] tracking-normal"
-    >
-      <span className="bg-[linear-gradient(95.48deg,#00B4FD_-79.76%,#003ACE_91.37%)] bg-clip-text text-transparent">
-        Learn More
-      </span>
-      <Image
-        src="/assets/solutions/arrow-right.svg"
-        alt=""
-        width={13}
-        height={12}
-        className="arrow-hover"
-      />
-    </a>
   );
 }
 
@@ -187,7 +168,7 @@ export function DigitalBankingSection() {
               <Button className="min-w-[13.125rem] px-[3.1875rem]">Request Demo</Button>
             </div>
             <div className="mt-5">
-              <LearnMoreLink />
+              <LearnMoreLink className="gap-[5px] font-normal uppercase leading-[1.3] tracking-normal" />
             </div>
           </StickyColumn>
 

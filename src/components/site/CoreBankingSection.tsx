@@ -1,27 +1,8 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/Button';
 import { Heading } from '@/components/ui/Heading';
+import { LearnMoreLink } from '@/components/ui/LearnMoreLink';
 import { Container } from '@/components/shared/Container';
-
-function LearnMoreLink() {
-  return (
-    <a
-      href="#"
-      className="group inline-flex items-center gap-2 text-sm font-medium uppercase leading-none tracking-[-0.02em] text-[#00B4FD]"
-    >
-      <span className="relative pb-2 after:absolute after:bottom-0 after:left-0 after:h-px after:w-[32.58px] after:bg-[#00B4FD]">
-        Learn More
-      </span>
-      <Image
-        src="/assets/solutions/arrow-right.svg"
-        alt=""
-        width={13}
-        height={12}
-        className="arrow-hover"
-      />
-    </a>
-  );
-}
 
 export function CoreBankingSection() {
   return (
@@ -45,7 +26,7 @@ export function CoreBankingSection() {
             <Button className="min-w-[13.125rem] px-[3.1875rem]">Request Demo</Button>
           </div>
           <div className="mt-5">
-            <LearnMoreLink />
+            <LearnMoreLink className="text-[#00B4FD] font-medium leading-none tracking-[-0.02em]" />
           </div>
         </div>
 

@@ -1,8 +1,8 @@
-import Image from 'next/image';
 import { Button } from '@/components/ui/Button';
 import { Heading } from '@/components/ui/Heading';
 import { Container } from '@/components/shared/Container';
 import { StickyColumn } from '@/components/shared/StickyColumn';
+import { SolutionCard } from '@/components/shared/SolutionCard';
 
 const solutions = [
   {
@@ -34,48 +34,6 @@ const solutions = [
   },
 ];
 
-function LearnMoreLink() {
-  return (
-    <a
-      href="#"
-      className="group blue-action-link font-medium leading-none tracking-[-0.02em]"
-    >
-      <span className="underline-link-label">
-        Learn More
-      </span>
-      <Image
-        src="/assets/solutions/arrow-right.svg"
-        alt=""
-        width={13}
-        height={12}
-        className="arrow-hover"
-      />
-    </a>
-  );
-}
-
-function SolutionCard({ solution }: { solution: (typeof solutions)[number] }) {
-  return (
-    <article className="relative max-w-[17.5rem]">
-      {solution.tag ? (
-        <span className="absolute right-0 top-[1.7rem] text-sm font-medium uppercase tracking-[-0.02em] text-[#E9F4F9]/55">
-          {solution.tag}
-        </span>
-      ) : null}
-      <Image src={solution.icon} alt="" width={47} height={49} className="h-[42px] w-auto" />
-      <Heading as="h3" size="body" className="mt-7 text-[1.375rem] leading-[1.2] tracking-normal">
-        {solution.title}
-      </Heading>
-      <p className="body-copy-muted mt-8 tracking-normal">
-        {solution.copy}
-      </p>
-      <div className="mt-8">
-        <LearnMoreLink />
-      </div>
-    </article>
-  );
-}
-
 export function SolutionsSection() {
   return (
     <section className="section-dark py-16 sm:py-20 lg:py-[4.625rem]">
@@ -92,7 +50,7 @@ export function SolutionsSection() {
 
           <div className="grid gap-x-[5.125rem] gap-y-[5.875rem] sm:grid-cols-2">
             {solutions.map((solution) => (
-              <SolutionCard key={solution.title} solution={solution} />
+              <SolutionCard key={solution.title} {...solution} />
             ))}
           </div>
         </div>
