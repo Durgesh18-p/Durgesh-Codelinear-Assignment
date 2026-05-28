@@ -7,7 +7,7 @@ import { StickyColumn } from '@/components/shared/StickyColumn';
 
 const features = [
   {
-    title: 'Fully compliant with regulatory requirement',
+    title: "Fully compliant with regulatory requirement",
     copy: "The governance of risk management with regulations is achieved by our risk management framework that is fully integrated to work with digital bank's operational-risk protocols and procedures.",
     items: ['Pre-integrated Security System', 'Fully Compliant With Regulatory Requirement', 'Digitally Connected Core'],
     placement: 'top',

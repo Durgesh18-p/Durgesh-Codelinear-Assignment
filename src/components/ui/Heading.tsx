@@ -20,7 +20,7 @@ const sizes: Record<HeadingSize, string> = {
 
 export function Heading({ as: Component = 'h2', children, className = '', size = 'section', ...props }: HeadingProps) {
   return (
-    <Component className={cn('font-normal text-[#E9F4F9]', sizes[size], className)} {...props}>
+    <Component className={cn('font-normal', sizes[size], className)} {...props}>
       {children}
     </Component>
   );
